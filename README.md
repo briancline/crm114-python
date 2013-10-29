@@ -14,8 +14,8 @@ Originally crafted by [Sam Deane][3] of [Elegant Chaos][4] and
 [Born Sleepy][5], with ongoing improvements and maintenance by
 [Brian Cline][6].
 
-This module provides a very simplified interface to crm114. It does not
-attempt to expose all of crm114's power; instead it tries to hide almost all
+This module provides a very simplified interface to CRM-114. It does not
+attempt to expose all of CRM-114's power; instead it tries to hide almost all
 of the gory details.
 
 
@@ -23,14 +23,15 @@ of the gory details.
 Requirements
 ------------
 
+Python 2.7 is strongly recommended.
+
 Naturally, the `crm` binary itself is required, and should be in your path.
-Follow the instructions here for your operating system to install it.
+Follow the instructions here for your operating system to install CRM-114.
 
 
 ### Debian, Ubuntu, et al.
 
     apt-get install crm114
-
 
 ### CentOS, Fedora, Red Hat, et al.
 
@@ -46,19 +47,29 @@ Follow the instructions here for your operating system to install it.
     cd tre-*
     ./configure --enable-static
     make
-    make install
+    sudo make install
     cd ..
 
     curl -O http://crm114.sourceforge.net/tarballs/crm114-20100106-BlameMichelson.src.tar.gz
     tar -zxf crm114-*.tar.gz
     cd crm114*.src
     make
-    make install
+    sudo make install
     cd ..
 
 
-Examples
---------
+
+Installation
+------------
+
+This is really all you need:
+
+    sudo pip install crm114
+
+
+
+Usage
+-----
 
 To use the module, create an instance of the `Classifier` class, giving it the
 path to a directory where the data files will be stored, and a list of all
