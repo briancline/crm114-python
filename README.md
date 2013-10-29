@@ -12,12 +12,71 @@ approximate regular expressions, Hidden Markov Model, Orthogonal Sparse Bigrams
 Originally crafted by [Sam Deane][3] of [Elegant Chaos][4] and [Born Sleepy][5],
 with ongoing improvements and maintenance by [Brian Cline][6].
 
+This module provides a very simplified interface to crm114. It does not
+attempt to expose all of crm114's power; instead it tries to hide almost all
+of the gory details.
+
+
+
+Requirements
+------------
+
+Naturally, the `crm` binary itself is required, and should be in your path.
+Follow the instructions here for your operating system to install it.
+
+
+### Debian, Ubuntu, et al.
+
+    apt-get install crm114
+
+
+### CentOS, Fedora, Red Hat, et al.
+
+    ## Install and enable the EPEL repository package
+    rpm -Uvh http://mirror.steadfast.net/epel/6/i386/epel-release-6-8.noarch.rpm
+    yum install --enable-repo=epel crm114
+
+### Everyone else
+
+    ## If you do not yet have libtre and its headers:
+    curl -O http://crm114.sourceforge.net/tarballs/tre-0.7.5.tar.gz
+    tar -zxf tre-*.tar.gz
+    cd tre-*
+    ./configure --enable-static
+    make
+    make install
+    cd ..
+
+    curl -O http://crm114.sourceforge.net/tarballs/crm114-20100106-BlameMichelson.src.tar.gz
+    tar -zxf crm114-*.tar.gz
+    cd crm114*.src
+    make
+    make install
+    cd ..
 
 
 Examples
 --------
 
-    print('TODO')
+To use the module, create an instance of the `Classifier` class, giving it the
+path to a directory where the data files will be stored, and a list of all
+possible category strings--or labels--under which text will be classified.
+
+    c = Classifier("/path/to/my/data", ["good", "bad"])
+
+To teach the classifier object about some text, call the learn method passing
+in a category (one of the categories that you previously provided), and the
+text.
+
+    c.learn("good", "some good text")
+    c.learn("bad", "some bad text")
+
+To find out what the classifier thinks about a body of text, call the classify
+method, passing in the text. The result of this method is a pair: the first
+item is a category best matching the text, and the second item is the
+confidence/probability of that match.
+
+    label, confidence = c.classify("some text")
 
 
 
