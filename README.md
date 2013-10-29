@@ -1,16 +1,18 @@
 [CRM-114][1] Python Module
 ==========================
 
-This project is a Python module to interact with [The CRM-114 Discriminator][2],
-which handles learning and classification of text streams. While written and
-used primarily in spam classification, CRM-114 handles text streams of logs,
-data, etc. just as well with recorded accuracy rates exceeding 99.9%. A wide
-variety of methods can be used with CRM-114, namely regular expressions,
-approximate regular expressions, Hidden Markov Model, Orthogonal Sparse Bigrams
-(OSB), winnow, general correlation, K-Nearest-Neighbor, and bit entropy.
+This project is a Python module to interact with [The CRM-114
+Discriminator][2], which handles learning and classification of text streams.
+While written and used primarily in spam classification, CRM-114 handles text
+streams of logs, data, etc. just as well with recorded accuracy rates
+exceeding 99.9%. A wide variety of methods can be used with CRM-114, namely
+regular expressions, approximate regular expressions, Hidden Markov Model,
+Orthogonal Sparse Bigrams (OSB), winnow, general correlation,
+K-Nearest-Neighbor, and bit entropy.
 
-Originally crafted by [Sam Deane][3] of [Elegant Chaos][4] and [Born Sleepy][5],
-with ongoing improvements and maintenance by [Brian Cline][6].
+Originally crafted by [Sam Deane][3] of [Elegant Chaos][4] and
+[Born Sleepy][5], with ongoing improvements and maintenance by
+[Brian Cline][6].
 
 This module provides a very simplified interface to crm114. It does not
 attempt to expose all of crm114's power; instead it tries to hide almost all
