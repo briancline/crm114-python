@@ -1,10 +1,5 @@
 #!/usr/bin/python
 
-"""
-TODO: use proper path separator variable in the regular expression instead of assuming that it's a slash
-    
-"""
-
 __version__ = "1.0.0a1"
 
 __license__ = """
@@ -61,7 +56,7 @@ class Classifier:
     
     # ask the classifier what category best matches some text   
     def classify( self, text ):
-        path = string.replace(self.path, "/", "\\/") # need to escape path separator for the regexp matching
+        path = string.replace(self.path, os.pathsep, "\\%s" % os.pathsep) # need to escape path separator for the regexp matching
         command = kCrmPath + ( kClassifyCommand % (kClassificationType, self.getFileListString(), path, kClassificationExtension) )
         (fin, fout) = os.popen2( command )
         fin.write( text )
