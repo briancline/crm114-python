@@ -1,11 +1,11 @@
 #!/usr/bin/python
-from os.path import dirname
+import os
 from crm114 import Classifier
 
 
 if __name__ == "__main__":
     # perform a simple test
-    data_path = dirname(__file__) + '/data'
+    data_path = '%s%s%s' % (os.path.dirname(__file__), os.sep, 'data')
     c = Classifier( data_path, [ "good", "bad" ] )
 
     print c.getFileList()

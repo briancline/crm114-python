@@ -30,7 +30,7 @@ class Classifier:
     
     # ask the classifier what category best matches some text   
     def classify( self, text ):
-        path = string.replace(self.path, os.pathsep, "\\%s" % os.pathsep) # need to escape path separator for the regexp matching
+        path = string.replace(self.path, os.sep, "\\%s" % os.sep) # need to escape path separator for the regexp matching
         command = kCrmPath + ( kClassifyCommand % (kClassificationType, self.getFileListString(), path, kClassificationExtension) )
         (fin, fout) = os.popen2( command )
         fin.write( text )
