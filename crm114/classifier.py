@@ -69,16 +69,3 @@ class Classifier:
     # return a list of classification files as a string
     def getFileListString( self ):
         return string.join( self.getFileList(), " " )
-
-    # perform some self tests   
-    def test( self ):
-        print self.getFileList()
-            self.learn( "good", "this is a test" )
-            self.learn( "bad", "this is very bad" )
-            print "class was: %s, prob was:%f" % ( self.classify( "this is a test" ) )
-        
-        
-if __name__ == "__main__":
-    # perform a simple test
-    c = Classifier( "test/data", [ "good", "bad" ] )
-    c.test()
