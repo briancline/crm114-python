@@ -8,7 +8,7 @@ def readme_text(file_name):
 
 setup(
     name='crm114',
-    version='1.0.0a1',
+    version='2.0.0-dev',
     author='Brian Cline',
     author_email='brian.cline@gmail.com',
     description=('Python wrapper classes for the CRM-114 Discriminator '
