@@ -75,22 +75,24 @@ To use the module, create an instance of the `Classifier` class, giving it the
 path to a directory where the data files will be stored, and a list of all
 possible category strings--or labels--under which text will be classified.
 
-    c = Classifier("/path/to/my/data", ["good", "bad"])
+    c = Classifier('/path/to/my/data', ['good', 'bad'])
 
 To teach the classifier object about some text, call the learn method passing
 in a category (one of the categories that you previously provided), and the
 text.
 
-    c.learn("good", "some good text")
-    c.learn("bad", "some bad text")
+    c.learn('good', 'some good text')
+    c.learn('bad', 'some bad text')
 
 To find out what the classifier thinks about a body of text, call the classify
 method, passing in the text. The result of this method is a pair: the first
 item is a category best matching the text, and the second item is the
 confidence/probability of that match.
 
-    label, confidence = c.classify("some text")
+    label, confidence = c.classify('some text')
 
+For a rather contrived but possibly helpful detailed example, see
+`tests/basic.py`.
 
 
 License
