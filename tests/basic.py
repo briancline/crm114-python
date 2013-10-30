@@ -66,8 +66,8 @@ if __name__ == '__main__':
                       'I wanted to vomit',
                       'Please, only the finest of your treachery',
                       'this is a test',
-                      'a treacherous, terrible test that I hated ' +
-                      'and it made me vomit']
+                      'a treacherous, terrible test, which I hated ' +
+                      'as it made me vomit']
 
     category_max = len(max(categories, key=len))
     test_output_format = '%% 3.2f%%%%  %%%ds:  %%s' % category_max
