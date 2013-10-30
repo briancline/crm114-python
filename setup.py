@@ -7,7 +7,7 @@ def readme_text(file_name):
 
 
 setup(
-    name='crm-114',
+    name='crm114',
     version='1.0.0a1',
     author='Brian Cline',
     author_email='brian.cline@gmail.com',
@@ -16,7 +16,7 @@ setup(
     license = 'MIT',
     keywords = 'crm114 text analysis classifier',
     url = 'http://packages.python.org/crm-114',
-    packages=['crm-114', 'tests'],
+    packages=['crm114', 'tests'],
     long_description=readme_text('README.md'),
     classifiers=[
         'Development Status :: 3 - Alpha',
