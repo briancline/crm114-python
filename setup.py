@@ -1,23 +1,20 @@
-from os.path import join, dirname
 from setuptools import setup
-
-
-def readme_text(file_name):
-    return open(join(dirname(__file__), file_name)).read()
 
 
 setup(
     name='crm114',
-    version='2.0.0-dev',
+    version='2.0.0',
     author='Brian Cline',
     author_email='brian.cline@gmail.com',
     description=('Python wrapper classes for the CRM-114 Discriminator '
                  '(http://crm114.sourceforge.net/)'),
     license = 'MIT',
     keywords = 'crm114 text analysis classifier',
-    url = 'http://packages.python.org/crm-114',
+    url = 'http://packages.python.org/crm114',
     packages=['crm114', 'tests'],
-    long_description=readme_text('README.md'),
+    long_description='See README.md for full details, or '
+                     'https://github.com/briancline/crm114-python'
+                     '/blob/v2.0.0/README.md.',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
