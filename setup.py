@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='crm114',
-    version='2.0.0',
+    version='2.0.1',
     author='Brian Cline',
     author_email='brian.cline@gmail.com',
     description=('Python wrapper classes for the CRM-114 Discriminator '
@@ -11,10 +11,10 @@ setup(
     license = 'MIT',
     keywords = 'crm114 text analysis classifier',
     url = 'http://packages.python.org/crm114',
-    packages=['crm114', 'tests'],
+    packages=['crm114'],
     long_description='See README.md for full details, or '
                      'https://github.com/briancline/crm114-python'
-                     '/blob/v2.0.0/README.md.',
+                     '/blob/v2.0.1/README.md.',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
