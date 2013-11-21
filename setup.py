@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='crm114',
-    version='2.0.1',
+    version='2.0.2',
     author='Brian Cline',
     author_email='brian.cline@gmail.com',
     description=('Python wrapper classes for the CRM-114 Discriminator '

@@ -15,7 +15,7 @@ CLASSIFY_CMD = " '-{ isolate (:stats:);" \
                " output /:*:best:\\t:*:prob:/ }'"
 
 
-class Classifier:
+class Classifier(object):
     def __init__(self, path, categories=None):
         """ Wrapper class for the CRM-114 Discriminator. """
         self.categories = categories if categories else []
@@ -51,14 +51,14 @@ class Classifier:
         fin.write(text)
         fin.close()
 
-        list = string.split(fout.readline())
+        output_list = string.split(fout.readline())
         fout.close()
 
-        if list is None:
+        if output_list is None:
             return ('', 0.0)
         else:
-            category = list[0]
-            probability = float(list[1])
+            category = output_list[0]
+            probability = float(output_list[1])
             return (category, probability)
 
     def create_files(self):
@@ -67,7 +67,7 @@ class Classifier:
 
         # Create directory if necessary
         if not os.path.exists(self.path):
-            os.mkdirs(self.path)
+            os.makedirs(self.path)
 
         # Create category files
         for category in self.categories:
