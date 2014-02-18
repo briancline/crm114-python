@@ -1,20 +1,22 @@
 from setuptools import setup
 
+VERSION = '2.0.2'
+VERSION_TAG = 'v%s' % VERSION
+README_URL = ('https://github.com/briancline/crm114-python'
+              '/blob/%s/README.md' % VERSION_TAG)
 
 setup(
     name='crm114',
-    version='2.0.2',
+    version=VERSION,
     author='Brian Cline',
     author_email='brian.cline@gmail.com',
     description=('Python wrapper classes for the CRM-114 Discriminator '
                  '(http://crm114.sourceforge.net/)'),
     license = 'MIT',
-    keywords = 'crm114 text analysis classifier',
+    keywords = 'crm114 text analysis classifier kubrick',
     url = 'http://packages.python.org/crm114',
     packages=['crm114'],
-    long_description='See README.md for full details, or '
-                     'https://github.com/briancline/crm114-python'
-                     '/blob/v2.0.1/README.md.',
+    long_description='See README.md for full details, or %s.' % README_URL,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
